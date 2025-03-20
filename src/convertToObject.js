@@ -21,7 +21,9 @@ function convertToObject(sourceString) {
       return trimmedPart;
     });
 
-    result[key] = value;
+    if (key && value) {
+      result[key] = value;
+    }
   });
 
   return result;
